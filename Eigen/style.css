@@ -1,0 +1,27 @@
+:root {
+    --very-dark: #04364A;
+    --dark: #176B87;
+    --medium: #64CCC5;
+    --light: #DAFFFB;
+}
+
+.container1 {
+    background-color: var(--light);
+}
+
+.container2 {
+    position: relative;
+    background-color: var(--medium);
+    top: 100px;
+    left: 100px;
+    height: 100px;
+    
+}
+
+.division1 {
+    position: absolute;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--very-dark);
+}

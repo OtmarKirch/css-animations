@@ -16,7 +16,7 @@
     animation-name: shape-animation;
     animation-duration: 4s;
     animation-fill-mode: backwards;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     justify-content: center;
     background-color: var(--very-dark);
     display:flex;

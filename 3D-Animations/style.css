@@ -1,0 +1,112 @@
+:root {
+    --very-dark: #04364A;
+    --dark: #176B87;
+    --medium: #64CCC5;
+    --light: #DAFFFB;
+}
+
+.container {
+    padding: 50px;
+}
+
+.card {
+    position: relative;
+    height: 300px;
+    width: 100px;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+}
+
+.card-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    border: 2px solid var(--very-dark);
+    color: var(--very-dark);
+    position: absolute;
+    font-weight: 800;
+    animation: cube-animation 3s forwards ease-in-out;
+}
+
+.card-face--front {
+    background-color: var(--light);
+}
+
+.card-face--back {
+    background-color: var(--dark);
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: rotateY(180deg)
+}
+
+@keyframes cube-animation {
+
+}
+
+.line-container{
+    padding: 20px;
+    position: relative;
+    height: 24px;
+    width: 24px;
+    border: 2px solid var(--very-dark);
+    border-radius: 5px;
+}
+
+.line-top {
+    background-color: var(--very-dark);
+    height: 2px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    transition: transform 1s ease-in-out,
+    width 1s ease-in-out;
+    transform-origin: left;
+    border-radius: 1px;
+}
+
+.line-middle {
+    background-color: var(--very-dark);
+    height: 2px;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    opacity: 1;
+    transition: transform 1s ease-in-out,
+     opacity 1s ease-in-out;
+     border-radius: 1px;
+}
+
+.line-bottom {
+    background-color: var(--very-dark);
+    height: 2px;
+    width: 80%;
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    transition: transform 1s ease-in-out,
+     width 1s ease-in-out;
+    display: hidden;
+    transform-origin: left;
+    border-radius: 1px;
+}
+
+.line-container:hover .line-top {
+    transform: rotate(42deg);
+    width: 100%;
+}
+
+.line-container:hover .line-middle {
+    opacity: 0;
+}
+
+.line-container:hover .line-bottom {
+    transform: rotate(-42deg);
+    width: 100%;
+}

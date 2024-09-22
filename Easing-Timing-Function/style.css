@@ -1,0 +1,43 @@
+:root {
+    --very-dark: #04364A;
+    --dark: #176B87;
+    --medium: #64CCC5;
+    --light: #DAFFFB;
+}
+
+.container {
+    padding: 50px;
+}
+
+button {
+    background-color: var(--medium);
+    border: 2px solid var(--very-dark);
+    color: var(--very-dark);
+    border-radius: 10px;
+    padding: 15px;
+    width: 100px;
+    transition: 
+    background-color 1s linear 1s, 
+    color 1s cubic-bezier(0.25, 0.1, 0.25, 2) 1s, 
+    border 1s ease 1s, transform 1s cubic-bezier(0.25, 0.1, 0.25, 1.8), 
+    border-width 1s ease 2s,
+    width 1s cubic-bezier(0.25, 0.1, 0.25, 1.8) 1s,
+    padding 1s ease 1s;
+    
+}
+
+button:selected {
+    background-color: #0f0;
+    color: #fff;
+    border-color: #0f0;
+    opacity: .5;
+}
+
+button:hover {
+    background-color: var(--dark);
+    color: var(--light);
+    border-color: var(--medium);
+    transform: translateX(10px) translateY(-10px);
+    width: 200px;
+    padding: 20px;
+}

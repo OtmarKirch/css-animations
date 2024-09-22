@@ -1,0 +1,51 @@
+:root {
+  --very-dark: #04364A;
+  --dark: #176B87;
+  --medium: #64CCC5;
+  --light: #DAFFFB;
+}
+
+.container {
+  padding: 50px;
+}
+
+.square {
+    align-items: center;
+    color: var(--light);
+    animation: shape-animation 3s forwards ease-in-out;
+    animation-name: shape-animation;
+    animation-duration: 4s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    justify-content: center;
+    background-color: var(--very-dark);
+    display:flex;
+    height: 100px;
+    width: 100px;
+
+}
+
+@keyframes shape-animation {
+    0% {
+        background-color: var(--very-dark);
+    }
+
+    25% {
+        background-color: var(--dark);
+        transform: translateX(200px);
+        color: var(--medium);
+    }
+
+    50% {
+        background-color: var(--medium);
+        border-radius: 50%;
+        transform: translate(200px, 200px);
+        color: var(--dark);
+    }
+
+    75% {
+        background-color: var(--light);
+        transform: translateY(200px);
+    }
+
+}
